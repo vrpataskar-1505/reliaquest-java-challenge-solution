@@ -52,3 +52,37 @@ To format code according to style guidelines, you can run **spotlessApply** task
 
 The spotless plugin will also execute check-and-validation tasks as part of the gradle **build** task.
 `./gradlew build`
+
+
+
+----------------------------------------------------------------------------------------------------
+
+## My Implementation
+
+### What I Built:
+- Implemented all 3 REST endpoints as required
+- Added a Service layer (`EmployeeService.java`) to separate business logic from controller
+- Created `EmployeeModel.java` as concrete implementation of the Employee interface
+- Used in-memory list with mock data since no database was required
+
+### How to Run:
+- first of all changed the java version - 
+$env:JAVA_HOME = "C:\Program Files\Java\jdk-17"
+$env:Path = "$env:JAVA_HOME\bin;$env:Path"
+java -version
+
+- run project - 
+.\gradlew.bat bootRun
+
+### Endpoints:
+- `GET /api/v1/employee` - returns all the employees
+- `GET /api/v1/employee/{uuid}` - returns the single employee by UUID  
+- `POST /api/v1/employee` - creates new employee (by postman)
+
+
+### Tests:
+- Wrote JUnit unit tests for Service layer
+- Wrote MockMvc integration tests for Controller layer
+- Run tests with:
+.\gradlew.bat test
+
