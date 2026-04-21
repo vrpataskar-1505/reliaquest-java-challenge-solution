@@ -75,13 +75,6 @@ Run tests:
 
 ---
 
-## Future Improvements
-
-* Add database instead of in-memory storage
-* Add proper authentication/security
-* Add API documentation
-
----
 
 ## Thank you!
 
